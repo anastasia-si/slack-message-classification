@@ -40,7 +40,7 @@ TOXICITY_TYPES = ["Toxic", "Severe_Toxic", "Obscene", "Threat", "Insult", "Ident
 
 
 # call the apps.connections.open endpoint with app-level token to get a WebSocket URL
-headers = {'Authorization': 'Bearer ' + APP_TOKEN, 'Content-type': 'application/x-www-form-urlencoded'}
+headers = {'Authorization': f'Bearer {APP_TOKEN}', 'Content-type': 'application/x-www-form-urlencoded'}
 response = requests.post(SLACK_ENDPOINT, headers=headers)
 url = response.json()["url"]
 
